@@ -55,36 +55,36 @@ const Component = ({
   }, [ative, fromDate, toDate, setFirstAndLastClosePrice]);
   return (
     <Container>
-      <ResponsiveContainer height={400} width={900}>
-        <AreaChart
-          data={historicalData}
-          margin={{
-            top: 0,
-            right: 0,
-            left: 10,
-            bottom: 0,
-          }}
-        >
-          <CartesianGrid vertical={false} strokeDasharray="1" />
-          <XAxis dataKey="dateFormatted" hide />
-          <YAxis tickLine={false} axisLine={false} />
-          <Tooltip
-            formatter={(value: number) =>
-              new Intl.NumberFormat("pt-BR", {
-                style: "currency",
-                currency: "BRL",
-              }).format(value)
-            }
-          />
-          <Area
-            name={`Valor do ${ative}`}
-            type="monotone"
-            dataKey="close"
-            stroke="#4081EC" //trocar por cor global
-            fillOpacity={0.1}
-          />
-        </AreaChart>
-      </ResponsiveContainer>
+      <AreaChart
+        height={400}
+        width={900}
+        data={historicalData}
+        margin={{
+          top: 0,
+          right: 0,
+          left: 10,
+          bottom: 0,
+        }}
+      >
+        <CartesianGrid vertical={false} strokeDasharray="1" />
+        <XAxis dataKey="dateFormatted" hide />
+        <YAxis tickLine={false} axisLine={false} />
+        <Tooltip
+          formatter={(value: number) =>
+            new Intl.NumberFormat("pt-BR", {
+              style: "currency",
+              currency: "BRL",
+            }).format(value)
+          }
+        />
+        <Area
+          name={`Valor do ${ative}`}
+          type="monotone"
+          dataKey="close"
+          stroke="#4081EC"
+          fillOpacity={0.1}
+        />
+      </AreaChart>
     </Container>
   );
 };
