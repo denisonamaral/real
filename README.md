@@ -1,6 +1,6 @@
 # REAL VALOR
 
-Link para o DEMO: https://real-valor.herokuapp.com/
+Link para o APP DEMO: https://real-valor.herokuapp.com/
 
 # VÍDEO DEMO
 
