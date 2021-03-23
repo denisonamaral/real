@@ -1,5 +1,5 @@
 import { api } from "../../services/api";
-import { useEffect, useState, memo } from "react";
+import React, { useEffect, useState, memo } from "react";
 import { HistoricalData, CreateChartProps } from "./interfaces";
 import { DateTime } from "luxon";
 import { Container } from "./styles";

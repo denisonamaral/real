@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { DetailsProps } from "./interfaces";
 import { Container, ContainerInput } from "./styles";
 import { Title } from "../../components";

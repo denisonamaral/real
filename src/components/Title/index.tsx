@@ -1,3 +1,4 @@
+import React from "react";
 import { TitleProps } from "./interfaces";
 import { TitleContainer } from "./styles";
 

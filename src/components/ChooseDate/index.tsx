@@ -1,3 +1,4 @@
+import React from "react";
 import { ChooseDateProps } from "./interfaces";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
