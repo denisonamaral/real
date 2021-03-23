@@ -1,3 +1,5 @@
+import { FirstAndLastClose } from "../../pages/Home/interfaces";
+
 export interface HistoricalData {
   close: number;
   high: number;
@@ -11,4 +13,5 @@ export interface CreateChartProps {
   fromDate: Date;
   toDate: Date;
   ative: string;
+  setFirstAndLastClosePrice: (close: FirstAndLastClose) => void;
 }
