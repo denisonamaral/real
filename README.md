@@ -3,10 +3,7 @@
 # VÍDEO DEMO
 
 
-
-https://user-images.githubusercontent.com/72951419/112103779-01170b80-8b89-11eb-81f1-80c6d7160ad7.mp4
-
-
+https://user-images.githubusercontent.com/72951419/112103824-1855f900-8b89-11eb-9c77-08733f89b0f3.mp4
 
 
 # SCREENSHOTS
