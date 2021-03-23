@@ -3,7 +3,11 @@ import { DetailsProps } from "./interfaces";
 import { Container, ContainerInput } from "./styles";
 import { Title } from "../../components";
 
-export function Details({ firstAndLastClosePrice }: DetailsProps) {
+export function Details({
+  firstAndLastClosePrice,
+  ative,
+  setAtive,
+}: DetailsProps) {
   const [startingAmount, setStartingAmount] = useState<number>(10000);
   const [percentGain, setPercentGain] = useState<number>(0);
   const [profit, setProfit] = useState<number>(0);
@@ -35,6 +39,15 @@ export function Details({ firstAndLastClosePrice }: DetailsProps) {
           value={startingAmount}
           onChange={(event) => {
             handleChange(event);
+          }}
+        ></input>
+      </ContainerInput>
+      <ContainerInput>
+        <h4>Escolha o ativo:</h4>
+        <input
+          value={ative}
+          onChange={(event) => {
+            setAtive(event.currentTarget.value);
           }}
         ></input>
       </ContainerInput>

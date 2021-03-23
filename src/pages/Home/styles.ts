@@ -9,7 +9,7 @@ export const Container = styled.div`
 
 export const ContainerDate = styled.div`
   padding: 10px;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: var(--background-items);
   width: 400px;
   display: flex;
   justify-content: space-between;
@@ -17,7 +17,7 @@ export const ContainerDate = styled.div`
 
 export const Dates = styled.div`
   margin-top: 10px;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: var(--background-items);
   padding: 10px;
   border-radius: 10px;
 `;
@@ -25,7 +25,7 @@ export const Dates = styled.div`
 export const Header = styled.div`
   height: 200px;
   width: 100%;
-  background-color: #4081ec;
+  background-color: var(--blue);
 `;
 
 export const ContainerChart = styled.div`

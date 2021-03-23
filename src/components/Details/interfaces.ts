@@ -3,4 +3,6 @@ export interface DetailsProps {
     firstClose: number;
     lastClose: number;
   };
+  ative: string;
+  setAtive: (ative: string) => void;
 }

@@ -20,12 +20,17 @@ export function Home() {
     firstAndLastClosePrice,
     setFirstAndLastClosePrice,
   ] = useState<FirstAndLastClose>({ lastClose: 0, firstClose: 0 });
+  const [ative, setAtive] = useState<string>("BTC");
   return (
     <Container>
       <Header>
         <img src={logo} alt="real-valor-logo" />
       </Header>
-      <Details firstAndLastClosePrice={firstAndLastClosePrice} />
+      <Details
+        firstAndLastClosePrice={firstAndLastClosePrice}
+        setAtive={setAtive}
+        ative={ative}
+      />
       <Dates>
         <ContainerDate>
           <h4>Data inicial</h4>
@@ -40,7 +45,7 @@ export function Home() {
         <CreateChart
           fromDate={fromDate}
           toDate={toDate}
-          ative="BTC"
+          ative={ative}
           setFirstAndLastClosePrice={setFirstAndLastClosePrice}
         />
       </ContainerChart>
