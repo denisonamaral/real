@@ -1,8 +1,15 @@
 import { useState } from "react";
 import { ChooseDate, CreateChart, Details } from "../../components";
-import { Container } from "./styles";
+import {
+  Container,
+  ContainerDate,
+  Dates,
+  Header,
+  ContainerChart,
+} from "./styles";
 import { DateTime } from "luxon";
 import { FirstAndLastClose } from "./interfaces";
+import logo from "../../assets/logo-real-valor.png";
 
 export function Home() {
   const onYearAgo = DateTime.now().startOf("day").minus({ year: 1 }).toJSDate();
@@ -15,15 +22,28 @@ export function Home() {
   ] = useState<FirstAndLastClose>({ lastClose: 0, firstClose: 0 });
   return (
     <Container>
+      <Header>
+        <img src={logo} alt="real-valor-logo" />
+      </Header>
       <Details firstAndLastClosePrice={firstAndLastClosePrice} />
-      <ChooseDate date={fromDate} setDate={setFromDate} />
-      <ChooseDate date={toDate} setDate={setToDate} />
-      <CreateChart
-        fromDate={fromDate}
-        toDate={toDate}
-        ative="BTC"
-        setFirstAndLastClosePrice={setFirstAndLastClosePrice}
-      />
+      <Dates>
+        <ContainerDate>
+          <h4>Data inicial</h4>
+          <ChooseDate date={fromDate} setDate={setFromDate} />
+        </ContainerDate>
+        <ContainerDate>
+          <h4>Data final</h4>
+          <ChooseDate date={toDate} setDate={setToDate} />
+        </ContainerDate>
+      </Dates>
+      <ContainerChart>
+        <CreateChart
+          fromDate={fromDate}
+          toDate={toDate}
+          ative="BTC"
+          setFirstAndLastClosePrice={setFirstAndLastClosePrice}
+        />
+      </ContainerChart>
     </Container>
   );
 }

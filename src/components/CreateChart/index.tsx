@@ -55,12 +55,12 @@ const Component = ({
   }, [ative, fromDate, toDate, setFirstAndLastClosePrice]);
   return (
     <Container>
-      <ResponsiveContainer height={300}>
+      <ResponsiveContainer height={400} width={900}>
         <AreaChart
           data={historicalData}
           margin={{
-            top: 10,
-            right: 30,
+            top: 0,
+            right: 0,
             left: 10,
             bottom: 0,
           }}
@@ -77,7 +77,7 @@ const Component = ({
             }
           />
           <Area
-            name="Total"
+            name={`Valor do ${ative}`}
             type="monotone"
             dataKey="close"
             stroke="#4081EC" //trocar por cor global
