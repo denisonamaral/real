@@ -3,7 +3,7 @@ import { Home } from "./pages";
 
 export function App() {
   return (
-    <div className="App">
+    <div>
       <Home />
       <GlobalStyle />
     </div>
